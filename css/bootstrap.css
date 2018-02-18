@@ -416,6 +416,10 @@ h6, .h6 {
   text-shadow: 2px 2px #000;
 }
 
+.subtitle {
+  color: #ffffff;
+}
+
 .display-4 {
   font-size: 3.5rem;
   font-weight: 300;
