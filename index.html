@@ -131,15 +131,15 @@
     <script src="../../../../assets/js/vendor/popper.min.js"></script>
     <script src="../../../../dist/js/bootstrap.min.js"></script>
 
-    <!-- OuiBounce Modal -->
-    <div id="ouibounce-modal">
+    <!-- OuiBounce popup -->
+    <div id="ouibounce-popup">
       <div class="underlay"></div>
-      <div class="modal">
-        <div class="modal-title">
-          <h3>This is a OuiBounce modal!</h3>
+      <div class="popup">
+        <div class="popup-title">
+          <h3>This is a OuiBounce popup!</h3>
         </div>
 
-        <div class="modal-body">
+        <div class="popup-body">
           <p>A doge is an elected chief of state lordship, the ruler of the Republic in many of the Italian city states during the medieval and renaissance periods, in the Italian "crowned republics".</p>
           <p>The word is from a Venetian word that descends from the Latin dux (as do the English duke and the standard Italian duce and duca), meaning "leader", especially in a military context. The wife of a doge is styled a dogaressa. <a href="https://en.wikipedia.org/wiki/Doge" target="blank">[1]</a></p>
 
@@ -150,29 +150,29 @@
           </form>
         </div>
 
-        <div class="modal-footer">
+        <div class="popup-footer">
           <p>no thanks</p>
         </div>
       </div>
     </div>
 
     <!-- Example page JS        -->
-    <!-- Used to fire the modal -->
+    <!-- Used to fire the popup -->
     <script>
       // if you want to use the 'fire' or 'disable' fn,
       // you need to save OuiBounce to an object
-      var _ouibounce = ouibounce(document.getElementById('ouibounce-modal'), {
+      var _ouibounce = ouibounce(document.getElementById('ouibounce-popup'), {
         aggressive: true,
         timer: 0,
         callback: function() { console.log('ouibounce fired!'); }
       });
       $('body').on('click', function() {
-        $('#ouibounce-modal').hide();
+        $('#ouibounce-popup').hide();
       });
-      $('#ouibounce-modal .modal-footer').on('click', function() {
-        $('#ouibounce-modal').hide();
+      $('#ouibounce-popup .popup-footer').on('click', function() {
+        $('#ouibounce-popup').hide();
       });
-      $('#ouibounce-modal .modal').on('click', function(e) {
+      $('#ouibounce-popup .popup').on('click', function(e) {
         e.stopPropagation();
       });
     </script>
